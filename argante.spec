@@ -1,5 +1,5 @@
-Summary:	Virtual operating system.
-Summary(pl):	Wirtualny system operacyjny.
+Summary:	Virtual operating system
+Summary(pl):	Wirtualny system operacyjny
 Name:		argante
 Version:	1.0
 Release:	1
@@ -10,11 +10,9 @@ Group(pl):	Aplikacje/System
 Source0:	http://lcamtuf.na.export.pl/arg.tgz
 URL:		http://agt.buka.org/
 Vendor:		Argante Development Team <argante@cgs.pl>
-BuildRequires:	grep
 BuildRequires:	svgalib-devel
 BuildRequires:	openssl-devel
 BuildRequires:	ncurses-devel
-BuildRequires:	binutils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -42,7 +40,7 @@ dokumentacja, wiele przyk³adów, kompaktowy serwer HTTP oraz DVR
 touch * */* */*/*
 
 %build
-OPT="$RPM_OPT_FLAGS" ./build
+OPT="%{rpmcflags}" ./build
 
 %install
 rm -rf $RPM_BUILD_ROOT
