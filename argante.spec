@@ -5,8 +5,6 @@ Version:	1.0
 Release:	1
 License:	LGPL
 Group:		Applications/System
-Group(de):	Applikationen/System
-Group(pl):	Aplikacje/System
 Source0:	http://lcamtuf.na.export.pl/arg.tgz
 URL:		http://agt.buka.org/
 Vendor:		Argante Development Team <argante@cgs.pl>
