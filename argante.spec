@@ -11,6 +11,7 @@ Vendor:		Argante Development Team <argante@cgs.pl>
 BuildRequires:	svgalib-devel
 BuildRequires:	openssl-devel
 BuildRequires:	ncurses-devel
+ExclusiveArch:	%{ix86} alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
