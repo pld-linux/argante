@@ -1,0 +1,47 @@
+diff -urN Argante.org/build Argante/build
+--- Argante.org/build	Thu Nov 23 21:09:12 2000
++++ Argante/build	Thu Nov 23 21:29:46 2000
+@@ -20,7 +20,12 @@
+ if [ "$SYS" = "Linux" ]; then
+   if [ -f /usr/include/readline/readline.h ]; then
+     CFLAGS="-DHAVE_READLINE -D__USE_TERMCAP"
+-    LIBS="-lreadline -ltermcap"
++    LIBS="-lreadline"
++    if [ -f /usr/lib/libtinfo.so ]; then
++    	LIBS="$LIBS -ltinfo"
++    else
++    	LIBS="$LIBS -ltermcap"
++    fi
+     echo "NOTE: libreadline detected, using it."
+   else
+     echo "NOTE: libreadline *NOT* detected, using old-style compilation."
+@@ -32,7 +37,7 @@
+     unset CFLAGS LIBS
+   fi
+   test "$NOREADLINE" = "" || unset CFLAGS LIBS
+-  CFLAGS="$CFLAGS $ADDFLAGS"
++  CFLAGS="$CFLAGS $ADDFLAGS $OPT"
+   export CFLAGS LIBS
+ 
+   echo ">>> Performing svgalib compatibility test..."
+@@ -49,7 +54,7 @@
+       -fcaller-saves -fstrength-reduce -fthread-jumps -funroll-loops \
+       -fcse-follow-jumps -fcse-skip-blocks -frerun-cse-after-loop \
+       -fexpensive-optimizations -fschedule-insns2 -m486 -ldl -rdynamic -lm \
+-      -lvga .ctest.c -o .ctest &>/dev/null
++      -lvga .ctest.c -o .ctest >/dev/null 2>&1
+ 
+   if [ ! -x .ctest ]; then
+     echo ">>> Test failed, compiling without gfx module."
+diff -urN Argante.org/sysdep/Makefile.lnx Argante/sysdep/Makefile.lnx
+--- Argante.org/sysdep/Makefile.lnx	Thu Nov 23 21:09:12 2000
++++ Argante/sysdep/Makefile.lnx	Thu Nov 23 21:19:36 2000
+@@ -25,7 +25,7 @@
+ MAIN    = kernel/main-boot.c
+ 
+ OFILE	= argante
+-CFLAGS  += -Iinclude -Imodules -fomit-frame-pointer -O9 -ffast-math -Wall -fforce-mem -fforce-addr -fcaller-saves -fstrength-reduce -fthread-jumps -funroll-loops -fcse-follow-jumps -fcse-skip-blocks -frerun-cse-after-loop -fexpensive-optimizations -fschedule-insns2 -m486
++CFLAGS  += -Iinclude -Imodules -fomit-frame-pointer -ffast-math -Wall -fforce-mem -fforce-addr -fcaller-saves -fstrength-reduce -fthread-jumps -funroll-loops -fcse-follow-jumps -fcse-skip-blocks -frerun-cse-after-loop -fexpensive-optimizations -fschedule-insns2
+ LIBS	+= -ldl -rdynamic -lm -lvga
+ CC	= gcc
+ 
