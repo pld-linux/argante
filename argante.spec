@@ -9,7 +9,7 @@ Source0:	http://lcamtuf.na.export.pl/arg.tgz
 URL:		http://agt.buka.org/
 Vendor:		Argante Development Team <argante@cgs.pl>
 BuildRequires:	svgalib-devel
-BuildRequires:	openssl-devel
+BuildRequires:	openssl-devel >= 0.9.7
 BuildRequires:	ncurses-devel
 ExclusiveArch:	%{ix86} alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
