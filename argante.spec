@@ -54,14 +54,12 @@ install hll/{ahlt,elim,acc}	$RPM_BUILD_ROOT%{_bindir}
 install modules/*.so		$RPM_BUILD_ROOT%{_libdir}/argante
 install Documentation/man/*.1	$RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf Documentation/{ANNOUNCE,ChangeLog,DVR.README,People,README,TODO}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Documentation/*.gz Documentation/IPC Examples conf
+%doc Documentation/{ANNOUNCE,ChangeLog,DVR.README,People,README,TODO} Documentation/IPC Examples conf
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %dir %{_libdir}/argante
 %attr(755,root,root) %{_libdir}/argante/*.so
