@@ -12,7 +12,6 @@ URL:		http://agt.buka.org/
 BuildRequires:	ncurses-devel
 BuildRequires:	openssl-devel >= 0.9.7d
 BuildRequires:	svgalib-devel
-ExclusiveArch:	%{ix86} alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
