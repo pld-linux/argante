@@ -4,14 +4,14 @@ Name:		argante
 Version:	1.0
 Release:	1
 License:	LGPL
+Vendor:		Argante Development Team <argante@cgs.pl>
 Group:		Applications/System
 Source0:	http://lcamtuf.na.export.pl/arg.tgz
 # Source0-md5:	cf5d46d8e5d12521abb7ad4e6277d331
 URL:		http://agt.buka.org/
-Vendor:		Argante Development Team <argante@cgs.pl>
-BuildRequires:	svgalib-devel
-BuildRequires:	openssl-devel >= 0.9.7c
 BuildRequires:	ncurses-devel
+BuildRequires:	openssl-devel >= 0.9.7c
+BuildRequires:	svgalib-devel
 ExclusiveArch:	%{ix86} alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
