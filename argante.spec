@@ -1,14 +1,13 @@
 Summary:	Virtual operating system.
 Summary(pl):	Wirtualny system operacyjny.
 Name:		argante
-Version:	0.009
+Version:	1.0
 Release:	1
 License:	LGPL
 Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
 Source0:	http://lcamtuf.na.export.pl/arg.tgz
-Patch0:		%{name}-build.patch
 URL:		http://agt.buka.org/
 Vendor:		Argante Development Team <argante@cgs.pl>
 BuildRequires:	grep
@@ -40,7 +39,6 @@ dokumentacja, wiele przyk³adów, kompaktowy serwer HTTP oraz DVR
 
 %prep
 %setup -q -n Argante
-%patch -p1
 touch * */* */*/*
 
 %build
