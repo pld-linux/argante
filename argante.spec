@@ -6,6 +6,7 @@ Release:	1
 License:	LGPL
 Group:		Applications/System
 Source0:	http://lcamtuf.na.export.pl/arg.tgz
+# Source0-md5:	cf5d46d8e5d12521abb7ad4e6277d331
 URL:		http://agt.buka.org/
 Vendor:		Argante Development Team <argante@cgs.pl>
 BuildRequires:	svgalib-devel
