@@ -10,7 +10,7 @@ Source0:	http://lcamtuf.na.export.pl/arg.tgz
 URL:		http://agt.buka.org/
 Vendor:		Argante Development Team <argante@cgs.pl>
 BuildRequires:	svgalib-devel
-BuildRequires:	openssl-devel >= 0.9.7
+BuildRequires:	openssl-devel
 BuildRequires:	ncurses-devel
 ExclusiveArch:	%{ix86} alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -60,7 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Documentation/{ANNOUNCE,ChangeLog,DVR.README,People,README,TODO} Documentation/IPC Examples conf
+%doc Documentation/{ANNOUNCE,ChangeLog,DVR.README,People,README,TODO} Examples conf
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %dir %{_libdir}/argante
 %attr(755,root,root) %{_libdir}/argante/*.so
