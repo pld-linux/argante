@@ -25,8 +25,8 @@ features. It comes with comprehensive documentation, many examples, a
 compact HTTP server and DVR (distributed virtual router) examples.
 
 %description -l pl
-Argante to w pe³ni-sprawnym virtualnym systemem operacyjnym
-zaprojektowanym do tworzenia aplikacji i rozwi±zañ sieciowych o
+Argante to w pe³ni sprawny wirtualny systemem operacyjny
+zaprojektowany do tworzenia aplikacji i rozwi±zañ sieciowych o
 wysokim poziomie bezpieczeñstwa, skuteczno¶ci i u¿yteczno¶ci. System
 wspiera HAC (hierarchiczne listy dostêpu, zdaln± komunikacjê
 miêdzyprocesow± dla przetwarzania rozproszonego (klastry, wirtualne
