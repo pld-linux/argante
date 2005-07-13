@@ -4,7 +4,6 @@ Name:		argante
 Version:	1.0
 Release:	1
 License:	LGPL
-Vendor:		Argante Development Team <argante@cgs.pl>
 Group:		Applications/System
 Source0:	http://lcamtuf.na.export.pl/arg.tgz
 # Source0-md5:	cf5d46d8e5d12521abb7ad4e6277d331
@@ -43,9 +42,7 @@ OPT="%{rpmcflags}" ./build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_libdir}/argante
-install -d $RPM_BUILD_ROOT%{_mandir}/man1
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/argante,%{_mandir}/man1}
 
 install argante			$RPM_BUILD_ROOT%{_bindir}
 install tools/{agt*,ripcd}	$RPM_BUILD_ROOT%{_bindir}
