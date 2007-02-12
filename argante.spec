@@ -1,5 +1,5 @@
 Summary:	Virtual operating system
-Summary(pl):	Wirtualny system operacyjny
+Summary(pl.UTF-8):   Wirtualny system operacyjny
 Name:		argante
 Version:	1.0
 Release:	1
@@ -23,14 +23,14 @@ Control, remote Inter-Process Communication for distributed computing
 features. It comes with comprehensive documentation, many examples, a
 compact HTTP server and DVR (distributed virtual router) examples.
 
-%description -l pl
-Argante to w pe³ni sprawny wirtualny systemem operacyjny
-zaprojektowany do tworzenia aplikacji i rozwi±zañ sieciowych o
-wysokim poziomie bezpieczeñstwa, skuteczno¶ci i u¿yteczno¶ci. System
-wspiera HAC (hierarchiczne listy dostêpu, zdaln± komunikacjê
-miêdzyprocesow± dla przetwarzania rozproszonego (klastry, wirtualne
+%description -l pl.UTF-8
+Argante to w peÅ‚ni sprawny wirtualny systemem operacyjny
+zaprojektowany do tworzenia aplikacji i rozwiÄ…zaÅ„ sieciowych o
+wysokim poziomie bezpieczeÅ„stwa, skutecznoÅ›ci i uÅ¼ytecznoÅ›ci. System
+wspiera HAC (hierarchiczne listy dostÄ™pu, zdalnÄ… komunikacjÄ™
+miÄ™dzyprocesowÄ… dla przetwarzania rozproszonego (klastry, wirtualne
 routery) jak i wiele innych. Wraz z systemem dostarczana jest
-dokumentacja, wiele przyk³adów, kompaktowy serwer HTTP oraz DVR
+dokumentacja, wiele przykÅ‚adÃ³w, kompaktowy serwer HTTP oraz DVR
 (rozproszony router wirtualny).
 
 %prep
