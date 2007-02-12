@@ -1,5 +1,5 @@
 Summary:	Virtual operating system
-Summary(pl.UTF-8):   Wirtualny system operacyjny
+Summary(pl.UTF-8):	Wirtualny system operacyjny
 Name:		argante
 Version:	1.0
 Release:	1
